@@ -277,7 +277,7 @@ func (m *Manager) messageWorker() {
 
 			// Pause on hitting the message rate.
 			if numMsg >= m.cfg.MessageRate {
-				time.Sleep(time.Second)
+				time.Sleep(time.Second * 60)
 				numMsg = 0
 			}
 			numMsg++
